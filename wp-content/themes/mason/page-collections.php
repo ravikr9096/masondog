@@ -16,9 +16,8 @@
 				<span>Styles</span>
 			</div>
 			
-			<ul id="Container" class="container">
-			<li>
-			<div class="prdt-nm">
+			<ul id="Container1" class="container1">
+			
 			<?php
 			$args = array(
 				'number'     => $number,
@@ -31,22 +30,24 @@
 			$count = count($product_categories);
 			if ( $count > 0 ){
 				foreach ( $product_categories as $product_category ) {
-					echo '<a href="' . get_term_link( $product_category ) . '">' . $product_category->name .'</a>';
-			?> 
-			</div>
-			</li>
+					echo '<li><div class="prdt-nm"><a href="' . get_term_link( $product_category ) . '">' . $product_category->name .'</a></div></li>';
+			?>
 			<?php
 			$args = array( 'post_type' => 'product', 'posts_per_page' => 10, 'product_cat' => $product_category->name, 'orderby' => 'rand' );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); global $product;
 			?>
 				
-				<li class="mix category-1">
+				<li >
 				<div class="prdt-img">
-					<a href="#" class="prd-img"><?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?> <span class="prd-inf"><?php the_title(); ?><br><?php echo $product->get_price_html(); ?></span></a>
+					<a href="#" class="prd-img">
+					<!--<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?> <span class="prd-inf"><?php the_title(); ?><br><?php echo $product->get_price_html(); ?></span>-->
+					<?php the_title(); ?>
 					
-				</div>
-				 <?php woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
+					</a>
+					
+				</div><br/>
+				 <?php //woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
 				</li>
 				<?php endwhile; ?>
 				<?php };?>
