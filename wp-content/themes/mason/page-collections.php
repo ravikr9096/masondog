@@ -33,15 +33,15 @@
 					echo '<li><div class="prdt-nm"><a href="' . get_term_link( $product_category ) . '">' . $product_category->name .'</a></div></li>';
 			?>
 			<?php
-			$args = array( 'post_type' => 'product', 'posts_per_page' => 10, 'product_cat' => $product_category->name, 'orderby' => 'rand' );
+			$args = array( 'post_type' => 'product', 'posts_per_page' => 20, 'product_cat' => $product_category->name, 'orderby' => 'rand' );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); global $product;
 			?>
 				
-				<li >
+				<li>
 				<div class="prdt-img">
 					<a href="#" class="prd-img">
-					<!--<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?> <span class="prd-inf"><?php the_title(); ?><br><?php echo $product->get_price_html(); ?></span>-->
+					<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?> <span class="prd-inf"><?php the_title(); ?><br><?php echo $product->get_price_html(); ?></span>
 					<?php the_title(); ?>
 					
 					</a>

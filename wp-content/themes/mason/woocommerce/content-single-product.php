@@ -17,7 +17,7 @@
 				<span>Styles</span>
 			</div>
 		</div>
-		<div class="prod-dtl">
+		<div class="prod-dtl"><?php echo do_shortcode('[wpv-woo-product-price]')?>
 			<div class="prdt-view-img">
 				<div class="targetarea">
 					<img id="img_01" src="zoom/image_1.png" data-zoom-image="zoom/image_1.png"/>
