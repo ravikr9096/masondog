@@ -1,4 +1,5 @@
 <?php get_header();?>
+<?php global $post, $product, $woocommerce; ?>
 <div class="inner-pg-banner">
 	<img src="<?php echo get_template_directory_uri();?>/images/slider-img/page-banner.png" alt="page Banner">
 	<h2 class="banner-titel">Collections</h2>
@@ -17,90 +18,77 @@
 				<span>Styles</span>
 			</div>
 		</div>
-		<div class="prod-dtl"><?php echo do_shortcode('[wpv-woo-product-price]')?>
+		<div style="clear:both;"></div>
+		<?php if(isset($_REQUEST['add-to-cart'])): ?>
+			<div class="woocommerce-message">
+				<a class="button wc-forward" href="<?php echo home_url(); ?>/cart/">View Cart</a> "<?php echo get_the_title($_REQUEST['add-to-cart']) ?>" was successfully added to your cart.
+			</div>
+	<?php endif; ?>
+		<div class="prod-dtl">
 			<div class="prdt-view-img">
 				<div class="targetarea">
-					<img id="img_01" src="zoom/image_1.png" data-zoom-image="zoom/image_1.png"/>
+					<?php include 'single-product/product-image.php'; ?>
 				</div>
-				<div id="gallery_01" class="thumbs">
-					<a href="#" data-image="zoom/image_1.png" data-zoom-image="zoom/image_1.png">
-					<img id="img_01" src="zoom/image_1.png"/>
-					</a>
-					<a href="#" data-image="zoom/image_2.png" data-zoom-image="zoom/image_2.png">
-					<img id="img_01" src="zoom/image_2.png"/>
-					</a>
-					<a href="#" data-image="zoom/image_3.png" data-zoom-image="zoom/image_3.png">
-					<img id="img_01" src="zoom/image_3.png"/>
-					</a>
-					<a href="#" data-image="zoom/image_4.png" data-zoom-image="zoom/image_4.png">
-					<img id="img_01" src="zoom/image_4.png"/>
-					</a>
-					<a href="#" data-image="zoom/image_3.png" data-zoom-image="zoom/image_3.png">
-					<img id="img_01" src="zoom/image_3.png"/>
-					</a>
-				</div>
+					<?php include 'single-product/product-thumbnails.php'; ?>
 			</div>
+			
 			<div class="prdt-info-txt">
 				<div class="prdt-name">
-					<h2>FOXY FLORAL</h2>
+					<h2><?php the_title(); ?></h2>
 					<span class="seprt"></span>
 					<p>
-						<sup>$</sup>52.00
+						<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+
+						<p class="price"><?php echo $product->get_price_html(); ?></p>
+
+						<meta itemprop="price" content="<?php echo $product->get_price(); ?>" />
+						<meta itemprop="priceCurrency" content="<?php echo get_woocommerce_currency(); ?>" />
+						<link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
+
+							</div>
 					</p>
 				</div>
 				<div class="prdt-descp">
-					<p>
-						Blimp orignal jersey tee. Easy Stretch ribbed trim around neck, shoulder and waist. Complete with rubber ink screen print detailing. Perfect for the transitional months of spring.
-					</p>
-					<p>
-						- Designed and handcrafted in japan<br>
-						 - 100% Japanese cotton<br>
-						 - Also available in <a href="#">Pink</a> for girls<br>
-						 - <a href="#">Sizing Guide</a>
-					</p>
+					<?php the_content(); ?>
 				</div>
 				<div class="prdt-name">
-					<select>
+				<?php add_action('woocommerce_after_shop_loop_item','woocommerce_template_single_add_to_cart');
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
+do_action( 'woocommerce_after_shop_loop_item' ); ?>
+				
+					<!-- <select>
 						<option>Select Size</option>
 						<option>XS</option>
 						<option>S</option>
 						<option>M</option>
 						<option>L</option>
 						<option>XL</option>
-					</select>
-					<input type="submit" class="font-icn add-to-crt" value="&#xf067; Add to Cart">
+					</select> -->
+					<?php //print do_shortcode('[add_to_cart id="'.$post->ID.'"]'); ?>
 				</div>
 				<div class="prdt-name">
 					<a href="#" class="prdt-share">Like it</a><a href="#" class="prdt-share">Tweet it</a><a href="#" class="prdt-share">Pin it</a>
 				</div>
 			</div>
-			<div class="relted-prds">
-				<h1 class="sec-title">OTHER STYLES YOU MIGHT LIKE</h1>
-				<ul class="othr-reltd-prds">
-					<li><img src="images/products-img/img-1.png">
-					<div class="prdt-dtl">
-						<span>The FLORAL</span><a href="#" title="View this Product">View</a>
-					</div>
-					</li>
-					<li><img src="images/products-img/img-3.png">
-					<div class="prdt-dtl">
-						<span>THE AZTECS</span><a href="#" title="View this Product">View</a>
-					</div>
-					</li>
-					<li><img src="images/products-img/img-6.png">
-					<div class="prdt-dtl">
-						<span>the FUNKY PRINTS</span><a href="#" title="View this Product">View</a>
-					</div>
-					</li>
-				</ul>
-			</div>
+			<?php include 'single-product/related.php'; ?>
 		</div>
 	</div>
 </div>
 
 
-
+		<?php wp_enqueue_script('jquery'); ?>
 <!---------------------------------------------------------------------->
-
+		<script src="<?php print get_template_directory_uri(); ?>/js/jquery.elevateZoom-2.5.3.min.js"></script>
+		<script src="<?php print get_template_directory_uri(); ?>/js/jquery.fancybox.js"></script>
+		<script type="text/javascript">
+			jQuery("#img_01").elevateZoom({gallery:'gallery_01', cursor: 'crosshair', galleryActiveClass: 'active'}); 
+			//pass the images to Fancybox
+			jQuery("#img_01").bind("click", function(e) {  
+			var ez =   $('#img_01').data('elevateZoom');	
+			jQuery.fancybox(ez.getGalleryList());
+			return false;
+			});
+		</script>
+		
 
 <?php get_footer()?>

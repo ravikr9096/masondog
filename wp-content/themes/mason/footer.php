@@ -83,7 +83,7 @@
 	</div>
 	<a class="close-reveal-modal">&#215;</a>
 </div>
-</body>
+<?php wp_footer(); ?>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.min.js"></script>
 <script src="<?php echo get_template_directory_uri();?>/js/home-slider.js"></script>
 <script src="<?php echo get_template_directory_uri();?>/js/jquery.reveal.js"></script>
@@ -129,4 +129,5 @@ $("#Container li:even").addClass("even");
 $('#Container').mixItUp();
 });
 		</script>
+		</body>
 </html>

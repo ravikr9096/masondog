@@ -1589,3 +1589,20 @@ bottom: 0; visibility:hidden;
     margin: 0 0 20px;
     width: 100%;
 }
+
+.add_to_cart_inline  del, .add_to_cart_inline  ins, .add_to_cart_inline  span.amount{ 
+	display:none;
+}
+.add_to_cart_inline {
+	border:0px solid #ccc !important; padding: 0px !important;
+}
+.reset_variations { display:none !important;}
+
+.variations_button .quantity {
+    margin-bottom: 10px;
+}
+
+.input-text.qty.text {
+    border: 2px solid #000;
+    height: 25px;
+}
