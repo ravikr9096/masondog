@@ -1,4 +1,4 @@
-<?php get_header();?>
+<?php get_header('inner');?>
 <?php global $post, $product, $woocommerce; ?>
 <div class="inner-pg-banner">
 	<img src="<?php echo get_template_directory_uri();?>/images/slider-img/page-banner.png" alt="page Banner">

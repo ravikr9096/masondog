@@ -1,4 +1,4 @@
-<?php get_header();?>
+<?php get_header('inner');?>
 <div class="inner-pg-banner">
 	<img src="<?php echo get_template_directory_uri();?>/images/slider-img/page-banner.png" alt="page Banner">
 	<h2 class="banner-titel">Collections</h2>
@@ -16,7 +16,7 @@
 				<span>Styles</span>
 			</div>
 			
-			<ul id="Container1" class="container1">
+			<ul id="Container" class="container">
 			
 			<?php
 			$args = array(
@@ -30,27 +30,34 @@
 			$count = count($product_categories);
 			if ( $count > 0 ){
 				foreach ( $product_categories as $product_category ) {
-					echo '<li><div class="prdt-nm"><a href="' . get_term_link( $product_category ) . '">' . $product_category->name .'</a></div></li>';
+					//echo '<li><div class="prdt-nm"><a href="' . get_term_link( $product_category ) . '">' . $product_category->name .'</a>';
+					echo '<li class="mix category-1">
+							<div class="prdt-nm">
+								<a href="' . get_term_link( $product_category ) . '">'. $product_category->name .'</a>
+							</div><div class="prdt-img">';
 			?>
 			<?php
-			$args = array( 'post_type' => 'product', 'posts_per_page' => 20, 'product_cat' => $product_category->name, 'orderby' => 'rand' );
+			$args = array( 'post_type' => 'product', 'posts_per_page' => 20, 'product_cat' => $product_category->slug, 'orderby' => 'rand' );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); global $product;
+			//print_r($product);
 			?>
+								
 				
-				<li>
-				<div class="prdt-img">
-					<a href="#" class="prd-img">
+					<a href="<?php echo $product->post->guid?>" class="prd-img">
 					<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" width="300px" height="300px" />'; ?> <span class="prd-inf"><?php the_title(); ?><br><?php echo $product->get_price_html(); ?></span>
-					<?php the_title(); ?>
+					
 					
 					</a>
 					
-				</div><br/>
+				
 				 <?php //woocommerce_template_loop_add_to_cart( $loop->post, $product ); ?>
-				</li>
+				
 				<?php endwhile; ?>
+				<?php echo '</div><br/></li>';?>
 				<?php };?>
+				</div>
+				</li>
 				<?php };?>
 					</ul>
 				<!------------------------------------------------->
