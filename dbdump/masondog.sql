@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Mar 22, 2015 at 12:25 PM
--- Server version: 5.5.24-log
--- PHP Version: 5.4.3
+-- Host: 127.0.0.1
+-- Generation Time: Mar 22, 2015 at 05:34 PM
+-- Server version: 5.6.17
+-- PHP Version: 5.5.12
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   `autoload` varchar(20) NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=423 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=471 ;
 
 --
 -- Dumping data for table `wp_options`
@@ -212,9 +212,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (93, 'widget_archives', 'a:2:{i:2;a:3:{s:5:"title";s:0:"";s:5:"count";i:0;s:8:"dropdown";i:0;}s:12:"_multiwidget";i:1;}', 'yes'),
 (94, 'widget_meta', 'a:2:{i:2;a:1:{s:5:"title";s:0:"";}s:12:"_multiwidget";i:1;}', 'yes'),
 (95, 'sidebars_widgets', 'a:3:{s:19:"wp_inactive_widgets";a:0:{}s:18:"orphaned_widgets_1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}s:13:"array_version";i:3;}', 'yes'),
-(96, 'cron', 'a:8:{i:1427028395;a:1:{s:32:"woocommerce_cancel_unpaid_orders";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:2:{s:8:"schedule";b:0;s:4:"args";a:0:{}}}}i:1427043932;a:2:{s:30:"woocommerce_tracker_send_event";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}s:28:"woocommerce_cleanup_sessions";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1427044539;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1427045874;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1427046952;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1427052540;a:1:{s:20:"wp_maybe_auto_update";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1427068800;a:1:{s:27:"woocommerce_scheduled_sales";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(96, 'cron', 'a:8:{i:1427042646;a:1:{s:32:"woocommerce_cancel_unpaid_orders";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:2:{s:8:"schedule";b:0;s:4:"args";a:0:{}}}}i:1427043932;a:2:{s:30:"woocommerce_tracker_send_event";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}s:28:"woocommerce_cleanup_sessions";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1427044539;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1427045874;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1427046952;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1427052540;a:1:{s:20:"wp_maybe_auto_update";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1427068800;a:1:{s:27:"woocommerce_scheduled_sales";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (98, '_site_transient_update_core', 'O:8:"stdClass":4:{s:7:"updates";a:1:{i:0;O:8:"stdClass":10:{s:8:"response";s:6:"latest";s:8:"download";s:59:"https://downloads.wordpress.org/release/wordpress-4.1.1.zip";s:6:"locale";s:5:"en_US";s:8:"packages";O:8:"stdClass":5:{s:4:"full";s:59:"https://downloads.wordpress.org/release/wordpress-4.1.1.zip";s:10:"no_content";s:70:"https://downloads.wordpress.org/release/wordpress-4.1.1-no-content.zip";s:11:"new_bundled";s:71:"https://downloads.wordpress.org/release/wordpress-4.1.1-new-bundled.zip";s:7:"partial";b:0;s:8:"rollback";b:0;}s:7:"current";s:5:"4.1.1";s:7:"version";s:5:"4.1.1";s:11:"php_version";s:5:"5.2.4";s:13:"mysql_version";s:3:"5.0";s:11:"new_bundled";s:3:"4.1";s:15:"partial_version";s:0:"";}}s:12:"last_checked";i:1427019161;s:15:"version_checked";s:5:"4.1.1";s:12:"translations";a:0:{}}', 'yes'),
-(99, '_transient_random_seed', '854f839d7e572a55370c90535c6f8a42', 'yes'),
+(99, '_transient_random_seed', 'f7fedcf410da139922aaca22024367fa', 'yes'),
 (105, '_site_transient_update_themes', 'O:8:"stdClass":4:{s:12:"last_checked";i:1427019166;s:7:"checked";a:4:{s:5:"mason";s:0:"";s:13:"twentyfifteen";s:3:"1.0";s:14:"twentyfourteen";s:3:"1.3";s:14:"twentythirteen";s:3:"1.4";}s:8:"response";a:0:{}s:12:"translations";a:0:{}}', 'yes'),
 (109, '_site_transient_timeout_browser_c065642163dbd30eb6b040fc31296a58', '1427217348', 'yes'),
 (110, '_site_transient_browser_c065642163dbd30eb6b040fc31296a58', 'a:9:{s:8:"platform";s:7:"Windows";s:4:"name";s:7:"Firefox";s:7:"version";s:4:"36.0";s:10:"update_url";s:23:"http://www.firefox.com/";s:7:"img_src";s:50:"http://s.wordpress.org/images/browsers/firefox.png";s:11:"img_src_ssl";s:49:"https://wordpress.org/images/browsers/firefox.png";s:15:"current_version";s:2:"16";s:7:"upgrade";b:0;s:8:"insecure";b:0;}', 'yes'),
@@ -327,9 +327,8 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (267, '_transient_external_ip_address_127.0.0.1', '103.17.50.217', 'no'),
 (268, '_transient_timeout_geoip_103.17.50.217', '1427303206', 'no'),
 (269, '_transient_geoip_103.17.50.217', 'IN', 'no'),
-(276, 'product_cat_children', 'a:0:{}', 'yes'),
-(308, '_transient_product_query-transient-version', '1427026035', 'yes'),
-(309, '_transient_product-transient-version', '1427026036', 'yes'),
+(308, '_transient_product_query-transient-version', '1427041450', 'yes'),
+(309, '_transient_product-transient-version', '1427041450', 'yes'),
 (310, '_transient_timeout_wc_rating_count_471426874342', '1429466350', 'no'),
 (311, '_transient_wc_rating_count_471426874342', '0', 'no'),
 (312, '_transient_timeout_wc_review_count_471426874342', '1429466350', 'no'),
@@ -343,7 +342,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (320, '_transient_timeout_wc_average_rating_401426874342', '1429466351', 'no'),
 (321, '_transient_wc_average_rating_401426874342', '', 'no'),
 (322, 'category_children', 'a:0:{}', 'yes'),
-(345, '_wc_session_1', 'a:20:{s:4:"cart";s:940:"a:3:{s:32:"67c6a1e7ce56d3d6fa748ab6d9af3fd7";a:9:{s:10:"product_id";i:47;s:12:"variation_id";s:0:"";s:9:"variation";a:0:{}s:8:"quantity";i:6;s:10:"line_total";d:258;s:8:"line_tax";i:0;s:13:"line_subtotal";i:258;s:17:"line_subtotal_tax";i:0;s:13:"line_tax_data";a:2:{s:5:"total";a:0:{}s:8:"subtotal";a:0:{}}}s:32:"2838023a778dfaecdc212708f721b788";a:9:{s:10:"product_id";i:51;s:12:"variation_id";s:0:"";s:9:"variation";a:0:{}s:8:"quantity";i:8;s:10:"line_total";d:800;s:8:"line_tax";i:0;s:13:"line_subtotal";i:800;s:17:"line_subtotal_tax";i:0;s:13:"line_tax_data";a:2:{s:5:"total";a:0:{}s:8:"subtotal";a:0:{}}}s:32:"3f1be4c62babad758b3144b059d2a0ca";a:9:{s:10:"product_id";i:51;s:12:"variation_id";i:56;s:9:"variation";a:1:{s:14:"attribute_size";s:1:"M";}s:8:"quantity";i:4;s:10:"line_total";d:400;s:8:"line_tax";i:0;s:13:"line_subtotal";i:400;s:17:"line_subtotal_tax";i:0;s:13:"line_tax_data";a:2:{s:5:"total";a:0:{}s:8:"subtotal";a:0:{}}}}";s:15:"applied_coupons";s:6:"a:0:{}";s:23:"coupon_discount_amounts";s:6:"a:0:{}";s:27:"coupon_discount_tax_amounts";s:6:"a:0:{}";s:21:"removed_cart_contents";s:6:"a:0:{}";s:19:"cart_contents_total";d:1458;s:20:"cart_contents_weight";i:0;s:19:"cart_contents_count";i:18;s:5:"total";i:0;s:8:"subtotal";i:1458;s:15:"subtotal_ex_tax";i:1458;s:9:"tax_total";i:0;s:5:"taxes";s:6:"a:0:{}";s:14:"shipping_taxes";s:6:"a:0:{}";s:13:"discount_cart";i:0;s:14:"shipping_total";i:0;s:18:"shipping_tax_total";i:0;s:9:"fee_total";i:0;s:4:"fees";s:6:"a:0:{}";s:10:"wc_notices";s:2275:"a:1:{s:7:"success";a:14:{i:0;s:145:"<a href="http://localhost/mason-dog/cart/" class="button wc-forward">View Cart</a> &quot;foxy floral 2&quot; was successfully added to your cart.";i:1;s:145:"<a href="http://localhost/mason-dog/cart/" class="button wc-forward">View Cart</a> &quot;foxy floral 2&quot; was successfully added to your cart.";i:2;s:145:"<a href="http://localhost/mason-dog/cart/" class="button wc-forward">View Cart</a> &quot;foxy floral 2&quot; was successfully added to your cart.";i:3;s:145:"<a href="http://localhost/mason-dog/cart/" class="button wc-forward">View Cart</a> &quot;foxy floral 2&quot; was successfully added to your cart.";i:4;s:145:"<a href="http://localhost/mason-dog/cart/" class="button wc-forward">View Cart</a> &quot;foxy floral 2&quot; was successfully added to your cart.";i:5;s:145:"<a href="http://localhost/mason-dog/cart/" class="button wc-forward">View Cart</a> &quot;foxy floral 2&quot; was successfully added to your cart.";i:6;s:149:"<a href="http://localhost/masondog/cart/" class="button wc-forward">View Cart</a> &quot;THE FUNKY PRINTS 1&quot; was successfully added to your cart.";i:7;s:149:"<a href="http://localhost/masondog/cart/" class="button wc-forward">View Cart</a> &quot;THE FUNKY PRINTS 1&quot; was successfully added to your cart.";i:8;s:149:"<a href="http://localhost/masondog/cart/" class="button wc-forward">View Cart</a> &quot;THE FUNKY PRINTS 1&quot; was successfully added to your cart.";i:9;s:149:"<a href="http://localhost/masondog/cart/" class="button wc-forward">View Cart</a> &quot;THE FUNKY PRINTS 1&quot; was successfully added to your cart.";i:10;s:149:"<a href="http://localhost/masondog/cart/" class="button wc-forward">View Cart</a> &quot;THE FUNKY PRINTS 1&quot; was successfully added to your cart.";i:11;s:149:"<a href="http://localhost/masondog/cart/" class="button wc-forward">View Cart</a> &quot;THE FUNKY PRINTS 1&quot; was successfully added to your cart.";i:12;s:149:"<a href="http://localhost/masondog/cart/" class="button wc-forward">View Cart</a> &quot;THE FUNKY PRINTS 1&quot; was successfully added to your cart.";i:13;s:149:"<a href="http://localhost/masondog/cart/" class="button wc-forward">View Cart</a> &quot;THE FUNKY PRINTS 1&quot; was successfully added to your cart.";}}";}', 'no'),
+(345, '_wc_session_1', 'a:20:{s:4:"cart";s:940:"a:3:{s:32:"67c6a1e7ce56d3d6fa748ab6d9af3fd7";a:9:{s:10:"product_id";i:47;s:12:"variation_id";s:0:"";s:9:"variation";a:0:{}s:8:"quantity";i:6;s:10:"line_total";d:258;s:8:"line_tax";i:0;s:13:"line_subtotal";i:258;s:17:"line_subtotal_tax";i:0;s:13:"line_tax_data";a:2:{s:5:"total";a:0:{}s:8:"subtotal";a:0:{}}}s:32:"2838023a778dfaecdc212708f721b788";a:9:{s:10:"product_id";i:51;s:12:"variation_id";s:0:"";s:9:"variation";a:0:{}s:8:"quantity";i:8;s:10:"line_total";d:800;s:8:"line_tax";i:0;s:13:"line_subtotal";i:800;s:17:"line_subtotal_tax";i:0;s:13:"line_tax_data";a:2:{s:5:"total";a:0:{}s:8:"subtotal";a:0:{}}}s:32:"3f1be4c62babad758b3144b059d2a0ca";a:9:{s:10:"product_id";i:51;s:12:"variation_id";i:56;s:9:"variation";a:1:{s:14:"attribute_size";s:1:"M";}s:8:"quantity";i:4;s:10:"line_total";d:400;s:8:"line_tax";i:0;s:13:"line_subtotal";i:400;s:17:"line_subtotal_tax";i:0;s:13:"line_tax_data";a:2:{s:5:"total";a:0:{}s:8:"subtotal";a:0:{}}}}";s:15:"applied_coupons";s:6:"a:0:{}";s:23:"coupon_discount_amounts";s:6:"a:0:{}";s:27:"coupon_discount_tax_amounts";s:6:"a:0:{}";s:21:"removed_cart_contents";s:6:"a:0:{}";s:19:"cart_contents_total";d:1458;s:20:"cart_contents_weight";i:0;s:19:"cart_contents_count";i:18;s:5:"total";i:0;s:8:"subtotal";i:1458;s:15:"subtotal_ex_tax";i:1458;s:9:"tax_total";i:0;s:5:"taxes";s:6:"a:0:{}";s:14:"shipping_taxes";s:6:"a:0:{}";s:13:"discount_cart";i:0;s:14:"shipping_total";i:0;s:18:"shipping_tax_total";i:0;s:9:"fee_total";i:0;s:4:"fees";s:6:"a:0:{}";s:10:"wc_notices";N;}', 'no'),
 (346, '_wc_session_expires_1', '1427122781', 'no'),
 (353, '_site_transient_timeout_theme_roots', '1427019363', 'yes'),
 (354, '_site_transient_theme_roots', 'a:4:{s:5:"mason";s:7:"/themes";s:13:"twentyfifteen";s:7:"/themes";s:14:"twentyfourteen";s:7:"/themes";s:14:"twentythirteen";s:7:"/themes";}', 'yes'),
@@ -412,7 +411,26 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (419, '_transient_timeout_wc_max_related_511427026036', '1429618051', 'no'),
 (420, '_transient_wc_max_related_511427026036', '1', 'no'),
 (421, '_transient_timeout_wc_max_related_501427026036', '1429619045', 'no'),
-(422, '_transient_wc_max_related_501427026036', '1', 'no');
+(422, '_transient_wc_max_related_501427026036', '1', 'no'),
+(431, '_transient_timeout_wc_rating_count_501427026036', '1429621495', 'no'),
+(432, '_transient_wc_rating_count_501427026036', '0', 'no'),
+(433, '_transient_timeout_wc_average_rating_501427026036', '1429621495', 'no'),
+(434, '_transient_wc_average_rating_501427026036', '', 'no'),
+(435, '_transient_timeout_wc_rating_count_511427026036', '1429621495', 'no'),
+(436, '_transient_wc_rating_count_511427026036', '0', 'no'),
+(437, '_transient_timeout_wc_average_rating_511427026036', '1429621495', 'no'),
+(438, '_transient_wc_average_rating_511427026036', '', 'no'),
+(451, 'product_cat_children', 'a:0:{}', 'yes'),
+(461, '_transient_timeout_wc_max_related_591427039775', '1429632979', 'no'),
+(462, '_transient_wc_max_related_591427039775', '1', 'no'),
+(463, '_transient_timeout_wc_max_related_601427039775', '1429633006', 'no'),
+(464, '_transient_wc_max_related_601427039775', '1', 'no'),
+(465, '_transient_timeout_wc_max_related_601427041450', '1429633453', 'no'),
+(466, '_transient_wc_max_related_601427041450', '1', 'no'),
+(467, '_transient_timeout_wc_term_counts', '1429633632', 'no'),
+(468, '_transient_wc_term_counts', 'a:3:{i:13;s:0:"";i:12;s:1:"2";i:9;s:1:"2";}', 'no'),
+(469, '_transient_timeout_wc_max_related_591427041450', '1429633697', 'no'),
+(470, '_transient_wc_max_related_591427041450', '1', 'no');
 
 -- --------------------------------------------------------
 
@@ -428,7 +446,7 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=494 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=558 ;
 
 --
 -- Dumping data for table `wp_postmeta`
@@ -445,7 +463,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (26, 8, '_edit_last', '1'),
 (27, 8, '_edit_lock', '1426615464:1'),
 (28, 14, '_edit_last', '1'),
-(29, 14, '_edit_lock', '1426697908:1'),
+(29, 14, '_edit_lock', '1427029450:1'),
 (75, 21, '_menu_item_type', 'custom'),
 (76, 21, '_menu_item_menu_item_parent', '0'),
 (77, 21, '_menu_item_object_id', '21'),
@@ -542,7 +560,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (178, 32, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
 (179, 32, '_menu_item_xfn', ''),
 (180, 32, '_menu_item_url', ''),
-(181, 33, '_form', '<p>Your Name (required)<br />\n    [text * your-name class:input-bx] </p>\n\n<p>Your Email (required)<br />\n    [email* your-email] </p>\n\n<p>Subject<br />\n    [text your-subject] </p>\n\n<p>Your Message<br />\n    [textarea your-message] </p>\n\n<p>[submit class:my-btn class:font-icn "Send"]</p>'),
+(181, 33, '_form', '<p>Your Name<br />\n    [text* text-320 class:input-bx "Enter your name"]</p>\n\n<p>Your Email<br />\n   [email* email-72 class:input-bx "Enter your email"] </p>\n\n<p>Subject<br />\n    [text your-subject] </p>\n\n<p>Your Message<br />\n    [textarea your-message] </p>\n\n<p>[submit class:my-btn class:font-icn "Send"]</p>'),
 (182, 33, '_mail', 'a:8:{s:7:"subject";s:14:"[your-subject]";s:6:"sender";s:35:"[your-name] <asifkhan453@gmail.com>";s:4:"body";s:173:"From: [your-name] <[your-email]>\nSubject: [your-subject]\n\nMessage Body:\n[your-message]\n\n--\nThis e-mail was sent from a contact form on mason-dog (http://localhost/mason-dog)";s:9:"recipient";s:21:"asifkhan453@gmail.com";s:18:"additional_headers";s:22:"Reply-To: [your-email]";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}'),
 (183, 33, '_mail_2', 'a:9:{s:6:"active";b:0;s:7:"subject";s:14:"[your-subject]";s:6:"sender";s:33:"mason-dog <asifkhan453@gmail.com>";s:4:"body";s:115:"Message Body:\n[your-message]\n\n--\nThis e-mail was sent from a contact form on mason-dog (http://localhost/mason-dog)";s:9:"recipient";s:12:"[your-email]";s:18:"additional_headers";s:31:"Reply-To: asifkhan453@gmail.com";s:11:"attachments";s:0:"";s:8:"use_html";b:0;s:13:"exclude_blank";b:0;}'),
 (184, 33, '_messages', 'a:23:{s:12:"mail_sent_ok";s:43:"Your message was sent successfully. Thanks.";s:12:"mail_sent_ng";s:93:"Failed to send your message. Please try later or contact the administrator by another method.";s:16:"validation_error";s:74:"Validation errors occurred. Please confirm the fields and submit it again.";s:4:"spam";s:93:"Failed to send your message. Please try later or contact the administrator by another method.";s:12:"accept_terms";s:35:"Please accept the terms to proceed.";s:16:"invalid_required";s:34:"Please fill in the required field.";s:16:"invalid_too_long";s:23:"This input is too long.";s:17:"invalid_too_short";s:24:"This input is too short.";s:17:"captcha_not_match";s:31:"Your entered code is incorrect.";s:14:"invalid_number";s:28:"Number format seems invalid.";s:16:"number_too_small";s:25:"This number is too small.";s:16:"number_too_large";s:25:"This number is too large.";s:13:"invalid_email";s:28:"Email address seems invalid.";s:11:"invalid_url";s:18:"URL seems invalid.";s:11:"invalid_tel";s:31:"Telephone number seems invalid.";s:23:"quiz_answer_not_correct";s:27:"Your answer is not correct.";s:12:"invalid_date";s:26:"Date format seems invalid.";s:14:"date_too_early";s:23:"This date is too early.";s:13:"date_too_late";s:22:"This date is too late.";s:13:"upload_failed";s:22:"Failed to upload file.";s:24:"upload_file_type_invalid";s:30:"This file type is not allowed.";s:21:"upload_file_too_large";s:23:"This file is too large.";s:23:"upload_failed_php_error";s:38:"Failed to upload file. Error occurred.";}'),
@@ -616,226 +634,62 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (252, 47, '_crosssell_ids', 'a:0:{}'),
 (253, 47, '_product_image_gallery', ''),
 (254, 47, '_thumbnail_id', '45'),
-(255, 48, '_edit_last', '1'),
-(256, 48, '_edit_lock', '1426954327:1'),
-(257, 48, '_thumbnail_id', '44'),
-(258, 48, '_visibility', 'visible'),
-(259, 48, '_stock_status', 'instock'),
-(260, 48, 'total_sales', '0'),
-(261, 48, '_downloadable', 'no'),
-(262, 48, '_virtual', 'no'),
-(263, 48, '_regular_price', '32'),
-(264, 48, '_sale_price', '21'),
-(265, 48, '_purchase_note', ''),
-(266, 48, '_featured', 'no'),
-(267, 48, '_weight', ''),
-(268, 48, '_length', ''),
-(269, 48, '_width', ''),
-(270, 48, '_height', ''),
-(271, 48, '_sku', '23'),
-(272, 48, '_product_attributes', 'a:0:{}'),
-(273, 48, '_sale_price_dates_from', ''),
-(274, 48, '_sale_price_dates_to', ''),
-(275, 48, '_price', '21'),
-(276, 48, '_sold_individually', ''),
-(277, 48, '_manage_stock', 'no'),
-(278, 48, '_backorders', 'no'),
-(279, 48, '_stock', ''),
-(280, 48, '_upsell_ids', 'a:0:{}'),
-(281, 48, '_crosssell_ids', 'a:0:{}'),
-(282, 48, '_product_image_gallery', ''),
-(283, 49, '_edit_last', '1'),
-(284, 49, '_edit_lock', '1426954384:1'),
-(285, 49, '_thumbnail_id', '43'),
-(286, 49, '_visibility', 'visible'),
-(287, 49, '_stock_status', 'instock'),
-(288, 49, 'total_sales', '0'),
-(289, 49, '_downloadable', 'no'),
-(290, 49, '_virtual', 'no'),
-(291, 49, '_regular_price', '32'),
-(292, 49, '_sale_price', '21'),
-(293, 49, '_purchase_note', ''),
-(294, 49, '_featured', 'no'),
-(295, 49, '_weight', ''),
-(296, 49, '_length', ''),
-(297, 49, '_width', ''),
-(298, 49, '_height', ''),
-(299, 49, '_sku', '43'),
-(300, 49, '_product_attributes', 'a:0:{}'),
-(301, 49, '_sale_price_dates_from', ''),
-(302, 49, '_sale_price_dates_to', ''),
-(303, 49, '_price', '21'),
-(304, 49, '_sold_individually', ''),
-(305, 49, '_manage_stock', 'no'),
-(306, 49, '_backorders', 'no'),
-(307, 49, '_stock', ''),
-(308, 49, '_upsell_ids', 'a:0:{}'),
-(309, 49, '_crosssell_ids', 'a:0:{}'),
-(310, 49, '_product_image_gallery', ''),
-(311, 50, '_edit_last', '1'),
-(312, 50, '_edit_lock', '1426954440:1'),
-(313, 50, '_thumbnail_id', '42'),
-(314, 50, '_visibility', 'visible'),
-(315, 50, '_stock_status', 'instock'),
-(316, 50, 'total_sales', '0'),
-(317, 50, '_downloadable', 'no'),
-(318, 50, '_virtual', 'no'),
-(319, 50, '_regular_price', '43'),
-(320, 50, '_sale_price', '23'),
-(321, 50, '_purchase_note', ''),
-(322, 50, '_featured', 'no'),
-(323, 50, '_weight', ''),
-(324, 50, '_length', ''),
-(325, 50, '_width', ''),
-(326, 50, '_height', ''),
-(327, 50, '_sku', '65'),
-(328, 50, '_product_attributes', 'a:0:{}'),
-(329, 50, '_sale_price_dates_from', ''),
-(330, 50, '_sale_price_dates_to', ''),
-(331, 50, '_price', '23'),
-(332, 50, '_sold_individually', ''),
-(333, 50, '_manage_stock', 'no'),
-(334, 50, '_backorders', 'no'),
-(335, 50, '_stock', ''),
-(336, 50, '_upsell_ids', 'a:0:{}'),
-(337, 50, '_crosssell_ids', 'a:0:{}'),
-(338, 50, '_product_image_gallery', ''),
-(339, 51, '_edit_last', '1'),
-(340, 51, '_edit_lock', '1427027050:1'),
-(341, 51, '_thumbnail_id', '41'),
-(342, 51, '_visibility', 'visible'),
-(343, 51, '_stock_status', 'instock'),
-(344, 51, 'total_sales', '0'),
-(345, 51, '_downloadable', 'no'),
-(346, 51, '_virtual', 'no'),
-(347, 51, '_regular_price', ''),
-(348, 51, '_sale_price', ''),
-(349, 51, '_purchase_note', ''),
-(350, 51, '_featured', 'no'),
-(351, 51, '_weight', ''),
-(352, 51, '_length', ''),
-(353, 51, '_width', ''),
-(354, 51, '_height', ''),
-(355, 51, '_sku', '675'),
-(356, 51, '_product_attributes', 'a:1:{s:4:"size";a:6:{s:4:"name";s:4:"Size";s:5:"value";s:33:"Select Size | XS | S | M | L | XL";s:8:"position";s:1:"0";s:10:"is_visible";i:1;s:12:"is_variation";i:1;s:11:"is_taxonomy";i:0;}}'),
-(357, 51, '_sale_price_dates_from', ''),
-(358, 51, '_sale_price_dates_to', ''),
-(359, 51, '_price', '100'),
-(360, 51, '_sold_individually', ''),
-(361, 51, '_manage_stock', 'no'),
-(362, 51, '_backorders', 'no'),
-(363, 51, '_stock', ''),
-(364, 51, '_upsell_ids', 'a:0:{}'),
-(365, 51, '_crosssell_ids', 'a:0:{}'),
-(366, 51, '_product_image_gallery', '45,44,43,42'),
-(368, 54, 'attribute_size', 'xs'),
-(369, 55, 'attribute_size', 's'),
-(370, 56, 'attribute_size', 'm'),
-(371, 57, 'attribute_size', 'l'),
-(372, 58, 'attribute_size', 'xl'),
-(391, 54, '_sku', ''),
-(392, 54, '_thumbnail_id', '0'),
-(393, 54, '_virtual', 'no'),
-(394, 54, '_downloadable', 'no'),
-(395, 54, '_weight', ''),
-(396, 54, '_length', ''),
-(397, 54, '_width', ''),
-(398, 54, '_height', ''),
-(399, 54, '_manage_stock', 'no'),
-(400, 54, '_stock_status', 'instock'),
-(401, 54, '_regular_price', '100'),
-(402, 54, '_sale_price', ''),
-(403, 54, '_sale_price_dates_from', ''),
-(404, 54, '_sale_price_dates_to', ''),
-(405, 54, '_price', '100'),
-(406, 54, '_download_limit', ''),
-(407, 54, '_download_expiry', ''),
-(408, 54, '_downloadable_files', ''),
-(409, 55, '_sku', ''),
-(410, 55, '_thumbnail_id', '0'),
-(411, 55, '_virtual', 'no'),
-(412, 55, '_downloadable', 'no'),
-(413, 55, '_weight', ''),
-(414, 55, '_length', ''),
-(415, 55, '_width', ''),
-(416, 55, '_height', ''),
-(417, 55, '_manage_stock', 'no'),
-(418, 55, '_stock_status', 'instock'),
-(419, 55, '_regular_price', '100'),
-(420, 55, '_sale_price', ''),
-(421, 55, '_sale_price_dates_from', ''),
-(422, 55, '_sale_price_dates_to', ''),
-(423, 55, '_price', '100'),
-(424, 55, '_download_limit', ''),
-(425, 55, '_download_expiry', ''),
-(426, 55, '_downloadable_files', ''),
-(427, 56, '_sku', ''),
-(428, 56, '_thumbnail_id', '0'),
-(429, 56, '_virtual', 'no'),
-(430, 56, '_downloadable', 'no'),
-(431, 56, '_weight', ''),
-(432, 56, '_length', ''),
-(433, 56, '_width', ''),
-(434, 56, '_height', ''),
-(435, 56, '_manage_stock', 'no'),
-(436, 56, '_stock_status', 'instock'),
-(437, 56, '_regular_price', '100'),
-(438, 56, '_sale_price', ''),
-(439, 56, '_sale_price_dates_from', ''),
-(440, 56, '_sale_price_dates_to', ''),
-(441, 56, '_price', '100'),
-(442, 56, '_download_limit', ''),
-(443, 56, '_download_expiry', ''),
-(444, 56, '_downloadable_files', ''),
-(445, 57, '_sku', ''),
-(446, 57, '_thumbnail_id', '0'),
-(447, 57, '_virtual', 'no'),
-(448, 57, '_downloadable', 'no'),
-(449, 57, '_weight', ''),
-(450, 57, '_length', ''),
-(451, 57, '_width', ''),
-(452, 57, '_height', ''),
-(453, 57, '_manage_stock', 'no'),
-(454, 57, '_stock_status', 'instock'),
-(455, 57, '_regular_price', '100'),
-(456, 57, '_sale_price', ''),
-(457, 57, '_sale_price_dates_from', ''),
-(458, 57, '_sale_price_dates_to', ''),
-(459, 57, '_price', '100'),
-(460, 57, '_download_limit', ''),
-(461, 57, '_download_expiry', ''),
-(462, 57, '_downloadable_files', ''),
-(463, 58, '_sku', ''),
-(464, 58, '_thumbnail_id', '0'),
-(465, 58, '_virtual', 'no'),
-(466, 58, '_downloadable', 'no'),
-(467, 58, '_weight', ''),
-(468, 58, '_length', ''),
-(469, 58, '_width', ''),
-(470, 58, '_height', ''),
-(471, 58, '_manage_stock', 'no'),
-(472, 58, '_stock_status', 'instock'),
-(473, 58, '_regular_price', '100'),
-(474, 58, '_sale_price', ''),
-(475, 58, '_sale_price_dates_from', ''),
-(476, 58, '_sale_price_dates_to', ''),
-(477, 58, '_price', '100'),
-(478, 58, '_download_limit', ''),
-(479, 58, '_download_expiry', ''),
-(480, 58, '_downloadable_files', ''),
-(481, 51, '_min_variation_price', '100'),
-(482, 51, '_max_variation_price', '100'),
-(483, 51, '_min_price_variation_id', '58'),
-(484, 51, '_max_price_variation_id', '58'),
-(485, 51, '_min_variation_regular_price', '100'),
-(486, 51, '_max_variation_regular_price', '100'),
-(487, 51, '_min_regular_price_variation_id', '58'),
-(488, 51, '_max_regular_price_variation_id', '58'),
-(489, 51, '_min_variation_sale_price', ''),
-(490, 51, '_max_variation_sale_price', ''),
-(491, 51, '_min_sale_price_variation_id', ''),
-(492, 51, '_max_sale_price_variation_id', ''),
-(493, 51, '_default_attributes', 'a:1:{s:4:"size";s:11:"select-size";}');
+(502, 59, '_edit_last', '1'),
+(503, 59, '_edit_lock', '1427039585:1'),
+(504, 59, '_visibility', 'visible'),
+(505, 59, '_stock_status', 'instock'),
+(506, 59, 'total_sales', '0'),
+(507, 59, '_downloadable', 'no'),
+(508, 59, '_virtual', 'no'),
+(509, 59, '_regular_price', '10'),
+(510, 59, '_sale_price', '9'),
+(511, 59, '_purchase_note', ''),
+(512, 59, '_featured', 'no'),
+(513, 59, '_weight', ''),
+(514, 59, '_length', ''),
+(515, 59, '_width', ''),
+(516, 59, '_height', ''),
+(517, 59, '_sku', ''),
+(518, 59, '_product_attributes', 'a:0:{}'),
+(519, 59, '_sale_price_dates_from', ''),
+(520, 59, '_sale_price_dates_to', ''),
+(521, 59, '_price', '9'),
+(522, 59, '_sold_individually', ''),
+(523, 59, '_manage_stock', 'no'),
+(524, 59, '_backorders', 'no'),
+(525, 59, '_stock', ''),
+(526, 59, '_upsell_ids', 'a:0:{}'),
+(527, 59, '_crosssell_ids', 'a:0:{}'),
+(528, 59, '_product_image_gallery', ''),
+(529, 59, '_thumbnail_id', '44'),
+(530, 60, '_edit_last', '1'),
+(531, 60, '_edit_lock', '1427041451:1'),
+(532, 60, '_thumbnail_id', '41'),
+(533, 60, '_visibility', 'visible'),
+(534, 60, '_stock_status', 'instock'),
+(535, 60, 'total_sales', '0'),
+(536, 60, '_downloadable', 'no'),
+(537, 60, '_virtual', 'no'),
+(538, 60, '_regular_price', '12'),
+(539, 60, '_sale_price', '2'),
+(540, 60, '_purchase_note', ''),
+(541, 60, '_featured', 'no'),
+(542, 60, '_weight', ''),
+(543, 60, '_length', ''),
+(544, 60, '_width', ''),
+(545, 60, '_height', ''),
+(546, 60, '_sku', ''),
+(547, 60, '_product_attributes', 'a:0:{}'),
+(548, 60, '_sale_price_dates_from', ''),
+(549, 60, '_sale_price_dates_to', ''),
+(550, 60, '_price', '2'),
+(551, 60, '_sold_individually', ''),
+(552, 60, '_manage_stock', 'no'),
+(553, 60, '_backorders', 'no'),
+(554, 60, '_stock', ''),
+(555, 60, '_upsell_ids', 'a:0:{}'),
+(556, 60, '_crosssell_ids', 'a:0:{}'),
+(557, 60, '_product_image_gallery', '');
 
 -- --------------------------------------------------------
 
@@ -872,7 +726,7 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=60 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=61 ;
 
 --
 -- Dumping data for table `wp_posts`
@@ -904,7 +758,7 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (30, 1, '2015-03-17 18:07:16', '2015-03-17 18:07:16', ' ', '', '', 'publish', 'open', 'open', '', '30', '', '', '2015-03-17 18:07:25', '2015-03-17 18:07:25', '', 0, 'http://localhost/mason-dog/?p=30', 3, 'nav_menu_item', '', 0),
 (31, 1, '2015-03-17 18:07:16', '2015-03-17 18:07:16', ' ', '', '', 'publish', 'open', 'open', '', '31', '', '', '2015-03-17 18:07:25', '2015-03-17 18:07:25', '', 0, 'http://localhost/mason-dog/?p=31', 2, 'nav_menu_item', '', 0),
 (32, 1, '2015-03-17 18:07:16', '2015-03-17 18:07:16', ' ', '', '', 'publish', 'open', 'open', '', '32', '', '', '2015-03-17 18:07:25', '2015-03-17 18:07:25', '', 0, 'http://localhost/mason-dog/?p=32', 1, 'nav_menu_item', '', 0),
-(33, 1, '2015-03-18 16:19:55', '2015-03-18 16:19:55', '<p>Your Name (required)<br />\r\n    [text * your-name class:input-bx] </p>\r\n\r\n<p>Your Email (required)<br />\r\n    [email* your-email] </p>\r\n\r\n<p>Subject<br />\r\n    [text your-subject] </p>\r\n\r\n<p>Your Message<br />\r\n    [textarea your-message] </p>\r\n\r\n<p>[submit class:my-btn class:font-icn "Send"]</p>\n[your-subject]\n[your-name] <asifkhan453@gmail.com>\nFrom: [your-name] <[your-email]>\r\nSubject: [your-subject]\r\n\r\nMessage Body:\r\n[your-message]\r\n\r\n--\r\nThis e-mail was sent from a contact form on mason-dog (http://localhost/mason-dog)\nasifkhan453@gmail.com\nReply-To: [your-email]\n\n\n\n\n[your-subject]\nmason-dog <asifkhan453@gmail.com>\nMessage Body:\r\n[your-message]\r\n\r\n--\r\nThis e-mail was sent from a contact form on mason-dog (http://localhost/mason-dog)\n[your-email]\nReply-To: asifkhan453@gmail.com\n\n\n\nYour message was sent successfully. Thanks.\nFailed to send your message. Please try later or contact the administrator by another method.\nValidation errors occurred. Please confirm the fields and submit it again.\nFailed to send your message. Please try later or contact the administrator by another method.\nPlease accept the terms to proceed.\nPlease fill in the required field.\nThis input is too long.\nThis input is too short.\nYour entered code is incorrect.\nNumber format seems invalid.\nThis number is too small.\nThis number is too large.\nEmail address seems invalid.\nURL seems invalid.\nTelephone number seems invalid.\nYour answer is not correct.\nDate format seems invalid.\nThis date is too early.\nThis date is too late.\nFailed to upload file.\nThis file type is not allowed.\nThis file is too large.\nFailed to upload file. Error occurred.', 'Contact form 1', '', 'publish', 'open', 'open', '', 'contact-form-1', '', '', '2015-03-18 17:01:10', '2015-03-18 17:01:10', '', 0, 'http://localhost/mason-dog/?post_type=wpcf7_contact_form&#038;p=33', 0, 'wpcf7_contact_form', '', 0),
+(33, 1, '2015-03-18 16:19:55', '2015-03-18 16:19:55', '<p>Your Name<br />\r\n    [text* text-320 class:input-bx "Enter your name"]</p>\r\n\r\n<p>Your Email<br />\r\n   [email* email-72 class:input-bx "Enter your email"] </p>\r\n\r\n<p>Subject<br />\r\n    [text your-subject] </p>\r\n\r\n<p>Your Message<br />\r\n    [textarea your-message] </p>\r\n\r\n<p>[submit class:my-btn class:font-icn "Send"]</p>\n[your-subject]\n[your-name] <asifkhan453@gmail.com>\nFrom: [your-name] <[your-email]>\r\nSubject: [your-subject]\r\n\r\nMessage Body:\r\n[your-message]\r\n\r\n--\r\nThis e-mail was sent from a contact form on mason-dog (http://localhost/mason-dog)\nasifkhan453@gmail.com\nReply-To: [your-email]\n\n\n\n\n[your-subject]\nmason-dog <asifkhan453@gmail.com>\nMessage Body:\r\n[your-message]\r\n\r\n--\r\nThis e-mail was sent from a contact form on mason-dog (http://localhost/mason-dog)\n[your-email]\nReply-To: asifkhan453@gmail.com\n\n\n\nYour message was sent successfully. Thanks.\nFailed to send your message. Please try later or contact the administrator by another method.\nValidation errors occurred. Please confirm the fields and submit it again.\nFailed to send your message. Please try later or contact the administrator by another method.\nPlease accept the terms to proceed.\nPlease fill in the required field.\nThis input is too long.\nThis input is too short.\nYour entered code is incorrect.\nNumber format seems invalid.\nThis number is too small.\nThis number is too large.\nEmail address seems invalid.\nURL seems invalid.\nTelephone number seems invalid.\nYour answer is not correct.\nDate format seems invalid.\nThis date is too early.\nThis date is too late.\nFailed to upload file.\nThis file type is not allowed.\nThis file is too large.\nFailed to upload file. Error occurred.', 'Contact form 1', '', 'publish', 'open', 'open', '', 'contact-form-1', '', '', '2015-03-22 13:13:36', '2015-03-22 13:13:36', '', 0, 'http://localhost/mason-dog/?post_type=wpcf7_contact_form&#038;p=33', 0, 'wpcf7_contact_form', '', 0),
 (34, 1, '2015-03-18 16:34:27', '2015-03-18 16:34:27', '[contact-form-7 id="33" title="Contact form 1"]v>', 'Contact', '', 'inherit', 'open', 'open', '', '14-revision-v1', '', '', '2015-03-18 16:34:27', '2015-03-18 16:34:27', '', 14, 'http://localhost/mason-dog/14-revision-v1/', 0, 'revision', '', 0),
 (35, 1, '2015-03-18 17:06:39', '2015-03-18 17:06:39', '', 'Shop', '', 'publish', 'closed', 'open', '', 'shop', '', '', '2015-03-18 17:06:39', '2015-03-18 17:06:39', '', 0, 'http://localhost/mason-dog/shop/', 0, 'page', '', 0),
 (36, 1, '2015-03-18 17:06:39', '2015-03-18 17:06:39', '[woocommerce_cart]', 'Cart', '', 'publish', 'closed', 'open', '', 'cart', '', '', '2015-03-18 17:06:39', '2015-03-18 17:06:39', '', 0, 'http://localhost/mason-dog/cart/', 0, 'page', '', 0),
@@ -919,15 +773,8 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (45, 1, '2015-03-20 17:57:42', '2015-03-20 17:57:42', '', 'img-1', '', 'inherit', 'open', 'open', '', 'img-1', '', '', '2015-03-20 17:57:42', '2015-03-20 17:57:42', '', 40, 'http://localhost/mason-dog/wp-content/uploads/2015/03/img-1.png', 0, 'attachment', 'image/png', 0),
 (46, 1, '2015-03-20 17:57:43', '2015-03-20 17:57:43', '', 'img-2', '', 'inherit', 'open', 'open', '', 'img-2', '', '', '2015-03-20 17:57:43', '2015-03-20 17:57:43', '', 40, 'http://localhost/mason-dog/wp-content/uploads/2015/03/img-2.png', 0, 'attachment', 'image/png', 0),
 (47, 1, '2015-03-20 17:58:37', '2015-03-20 17:58:37', 'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum', 'foxy floral 2', '', 'publish', 'open', 'closed', '', 'foxy-floral-2', '', '', '2015-03-20 17:59:02', '2015-03-20 17:59:02', '', 0, 'http://localhost/mason-dog/?post_type=product&#038;p=47', 0, 'product', '', 0),
-(48, 1, '2015-03-21 16:14:22', '2015-03-21 16:14:22', 'lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsumlorem ipsum', 'the aztecs', '', 'publish', 'open', 'closed', '', 'the-aztecs', '', '', '2015-03-21 16:14:22', '2015-03-21 16:14:22', '', 0, 'http://localhost/mason-dog/?post_type=product&#038;p=48', 0, 'product', '', 0),
-(49, 1, '2015-03-21 16:15:22', '2015-03-21 16:15:22', 'lorem ipsum lorem ipsum  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ', 'the aztecs 1', '', 'publish', 'open', 'closed', '', 'the-aztecs-1', '', '', '2015-03-21 16:15:22', '2015-03-21 16:15:22', '', 0, 'http://localhost/mason-dog/?post_type=product&#038;p=49', 0, 'product', '', 0),
-(50, 1, '2015-03-21 16:16:13', '2015-03-21 16:16:13', 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ', 'THE FUNKY PRINTS', '', 'publish', 'open', 'closed', '', 'the-funky-prints', '', '', '2015-03-21 16:16:13', '2015-03-21 16:16:13', '', 0, 'http://localhost/mason-dog/?post_type=product&#038;p=50', 0, 'product', '', 0),
-(51, 1, '2015-03-21 16:17:00', '2015-03-21 16:17:00', '<p>Blimp orignal jersey tee. Easy Stretch ribbed trim around neck, shoulder and waist. Complete with rubber ink screen print detailing. Perfect for the transitional months of spring.\r\n</p>\r\n<p>\r\n - Designed and handcrafted in japan<br>\r\n - 100% Japanese cotton<br>\r\n - Also available in <a href="#">Pink</a> for girls<br>\r\n - <a href="#">Sizing Guide</a>\r\n</p>', 'THE FUNKY PRINTS 1', '', 'publish', 'open', 'closed', '', 'the-funky-prints-1', '', '', '2015-03-22 12:07:15', '2015-03-22 12:07:15', '', 0, 'http://localhost/mason-dog/?post_type=product&#038;p=51', 0, 'product', '', 0),
-(54, 1, '2015-03-22 11:56:50', '2015-03-22 11:56:50', '', 'Variation #54 of THE FUNKY PRINTS 1', '', 'publish', 'open', 'open', '', 'product-51-variation-2', '', '', '2015-03-22 11:56:50', '2015-03-22 11:56:50', '', 51, 'http://localhost/masondog/product_variation/product-51-variation-2/', 1, 'product_variation', '', 0),
-(55, 1, '2015-03-22 11:56:51', '2015-03-22 11:56:51', '', 'Variation #55 of THE FUNKY PRINTS 1', '', 'publish', 'open', 'open', '', 'product-51-variation-3', '', '', '2015-03-22 11:56:51', '2015-03-22 11:56:51', '', 51, 'http://localhost/masondog/product_variation/product-51-variation-3/', 2, 'product_variation', '', 0),
-(56, 1, '2015-03-22 11:56:51', '2015-03-22 11:56:51', '', 'Variation #56 of THE FUNKY PRINTS 1', '', 'publish', 'open', 'open', '', 'product-51-variation-4', '', '', '2015-03-22 11:56:51', '2015-03-22 11:56:51', '', 51, 'http://localhost/masondog/product_variation/product-51-variation-4/', 3, 'product_variation', '', 0),
-(57, 1, '2015-03-22 11:56:51', '2015-03-22 11:56:51', '', 'Variation #57 of THE FUNKY PRINTS 1', '', 'publish', 'open', 'open', '', 'product-51-variation-5', '', '', '2015-03-22 11:56:51', '2015-03-22 11:56:51', '', 51, 'http://localhost/masondog/product_variation/product-51-variation-5/', 4, 'product_variation', '', 0),
-(58, 1, '2015-03-22 11:56:51', '2015-03-22 11:56:51', '', 'Variation #58 of THE FUNKY PRINTS 1', '', 'publish', 'open', 'open', '', 'product-51-variation-6', '', '', '2015-03-22 11:56:51', '2015-03-22 11:56:51', '', 51, 'http://localhost/masondog/product_variation/product-51-variation-6/', 5, 'product_variation', '', 0);
+(59, 1, '2015-03-22 15:11:06', '2015-03-22 15:11:06', 'description', 'The aztec1', '', 'publish', 'open', 'closed', '', 'the-aztec1', '', '', '2015-03-22 15:26:01', '2015-03-22 15:26:01', '', 0, 'http://localhost/masondog/?post_type=product&#038;p=59', 0, 'product', '', 0),
+(60, 1, '2015-03-22 15:56:14', '2015-03-22 15:56:14', 'sdfsdf sdf dsf sd', 'The aztec 2', '', 'publish', 'open', 'closed', '', 'the-aztec-2', '', '', '2015-03-22 16:24:10', '2015-03-22 16:24:10', '', 0, 'http://localhost/masondog/?post_type=product&#038;p=60', 0, 'product', '', 0);
 
 -- --------------------------------------------------------
 
@@ -943,7 +790,7 @@ CREATE TABLE IF NOT EXISTS `wp_terms` (
   PRIMARY KEY (`term_id`),
   KEY `slug` (`slug`),
   KEY `name` (`name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `wp_terms`
@@ -958,8 +805,8 @@ INSERT INTO `wp_terms` (`term_id`, `name`, `slug`, `term_group`) VALUES
 (7, 'variable', 'variable', 0),
 (8, 'external', 'external', 0),
 (9, 'the floral', 'the-floral', 0),
-(10, 'the aztecs', 'the-aztecs', 0),
-(11, 'THE FUNKY PRINTS', 'funky-prints', 0);
+(12, 'the aztecs', 'the_aztecs', 0),
+(13, 'the funky prints', 'the_funky_prints', 0);
 
 -- --------------------------------------------------------
 
@@ -997,14 +844,10 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (40, 9, 0),
 (47, 5, 0),
 (47, 9, 0),
-(48, 5, 0),
-(48, 10, 0),
-(49, 5, 0),
-(49, 10, 0),
-(50, 5, 0),
-(50, 11, 0),
-(51, 7, 0),
-(51, 11, 0);
+(59, 5, 0),
+(59, 12, 0),
+(60, 5, 0),
+(60, 12, 0);
 
 -- --------------------------------------------------------
 
@@ -1022,7 +865,7 @@ CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `wp_term_taxonomy`
@@ -1032,13 +875,13 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 (1, 1, 'category', '', 0, 1),
 (3, 3, 'nav_menu', '', 0, 7),
 (4, 4, 'nav_menu', '', 0, 5),
-(5, 5, 'product_type', '', 0, 5),
+(5, 5, 'product_type', '', 0, 4),
 (6, 6, 'product_type', '', 0, 0),
-(7, 7, 'product_type', '', 0, 1),
+(7, 7, 'product_type', '', 0, 0),
 (8, 8, 'product_type', '', 0, 0),
 (9, 9, 'product_cat', '', 0, 2),
-(10, 10, 'product_cat', '', 0, 2),
-(11, 11, 'product_cat', '', 0, 2);
+(12, 12, 'product_cat', '', 0, 2),
+(13, 13, 'product_cat', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -1074,7 +917,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (11, 1, 'wp_user_level', '10'),
 (12, 1, 'dismissed_wp_pointers', 'wp360_locks,wp390_widgets,wp410_dfw'),
 (13, 1, 'show_welcome_panel', '0'),
-(14, 1, 'session_tokens', 'a:3:{s:64:"7779e6e1510cdb787b949a9244523aba827245112fa4f2891054cf83bff74dec";a:4:{s:10:"expiration";i:1427042864;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:36.0) Gecko/20100101 Firefox/36.0";s:5:"login";i:1426870064;}s:64:"73841e033e2a85152803a1e7f8b65a32f2925b931744d7a9c2e3dd18a1234975";a:4:{s:10:"expiration";i:1427121206;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:36.0) Gecko/20100101 Firefox/36.0";s:5:"login";i:1426948406;}s:64:"8c3cc4d76c0dc8b95a4f2eb0024106e4308f8220b110ae5f89b30767845ec54a";a:4:{s:10:"expiration";i:1427190418;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:36.0) Gecko/20100101 Firefox/36.0";s:5:"login";i:1427017618;}}'),
+(14, 1, 'session_tokens', 'a:5:{s:64:"7779e6e1510cdb787b949a9244523aba827245112fa4f2891054cf83bff74dec";a:4:{s:10:"expiration";i:1427042864;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:36.0) Gecko/20100101 Firefox/36.0";s:5:"login";i:1426870064;}s:64:"73841e033e2a85152803a1e7f8b65a32f2925b931744d7a9c2e3dd18a1234975";a:4:{s:10:"expiration";i:1427121206;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:36.0) Gecko/20100101 Firefox/36.0";s:5:"login";i:1426948406;}s:64:"8c3cc4d76c0dc8b95a4f2eb0024106e4308f8220b110ae5f89b30767845ec54a";a:4:{s:10:"expiration";i:1427190418;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:36.0) Gecko/20100101 Firefox/36.0";s:5:"login";i:1427017618;}s:64:"aa29e5ab8e635f52f61ce16603a8bf9182430fda049020058312673bec151453";a:4:{s:10:"expiration";i:1427202198;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:36.0) Gecko/20100101 Firefox/36.0";s:5:"login";i:1427029398;}s:64:"a7a4dbe1614befb006f9aa9d2a44439be1919b85ddb1076f774b7c49a788f798";a:4:{s:10:"expiration";i:1427208186;s:2:"ip";s:9:"127.0.0.1";s:2:"ua";s:65:"Mozilla/5.0 (Windows NT 6.1; rv:36.0) Gecko/20100101 Firefox/36.0";s:5:"login";i:1427035386;}}'),
 (15, 1, 'wp_dashboard_quick_press_last_post_id', '3'),
 (16, 1, 'managenav-menuscolumnshidden', 'a:4:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";}'),
 (17, 1, 'metaboxhidden_nav-menus', 'a:2:{i:0;s:8:"add-post";i:1;s:12:"add-post_tag";}'),
@@ -1110,7 +953,7 @@ CREATE TABLE IF NOT EXISTS `wp_users` (
 --
 
 INSERT INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
-(1, 'admin', '$P$BjvYvpGAEof0eSyxN2oSGIybkjr1YI/', 'admin', 'asifkhan453@gmail.com', '', '2015-03-17 17:15:33', '', 0, 'admin');
+(1, 'admin', '$P$BDEvCIqJAsZMr.XC9Zisc1pAkk43zK1', 'admin', 'asifkhan453@gmail.com', '', '2015-03-17 17:15:33', '', 0, 'admin');
 
 -- --------------------------------------------------------
 
@@ -1238,7 +1081,7 @@ CREATE TABLE IF NOT EXISTS `wp_woocommerce_termmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `woocommerce_term_id` (`woocommerce_term_id`),
   KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `wp_woocommerce_termmeta`
@@ -1248,15 +1091,14 @@ INSERT INTO `wp_woocommerce_termmeta` (`meta_id`, `woocommerce_term_id`, `meta_k
 (1, 9, 'order', '0'),
 (2, 9, 'display_type', ''),
 (3, 9, 'thumbnail_id', '0'),
-(4, 10, 'order', '0'),
-(5, 10, 'display_type', ''),
-(6, 10, 'thumbnail_id', '0'),
-(7, 11, 'order', '0'),
-(8, 11, 'display_type', ''),
-(9, 11, 'thumbnail_id', '0'),
 (10, 9, 'product_count_product_cat', '2'),
-(11, 10, 'product_count_product_cat', '2'),
-(12, 11, 'product_count_product_cat', '2');
+(13, 12, 'order', '0'),
+(14, 12, 'display_type', ''),
+(15, 12, 'thumbnail_id', '0'),
+(16, 13, 'order', '0'),
+(17, 13, 'display_type', ''),
+(18, 13, 'thumbnail_id', '0'),
+(19, 12, 'product_count_product_cat', '2');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
