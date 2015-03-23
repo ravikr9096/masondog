@@ -15,6 +15,27 @@
 		<a href="<?php echo home_url();?>" class="logo" title="MASON(dog)"><img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="MASON(dog)"></a>
 		<div class="hdr-optn rit">
 			<a href="#" title="Sign In" data-reveal-id="myModal">Sign In</a>
+			<?php
+				global $woocommerce;
+
+				// get cart quantity
+				$qty = $woocommerce->cart->get_cart_contents_count();
+
+				// get cart total
+				$total = $woocommerce->cart->get_cart_total();
+
+				// get cart url
+				$cart_url = $woocommerce->cart->get_cart_url();
+
+				// if multiple products in cart
+				if($qty>1)
+					  echo '<a href="'.$cart_url.'" class="font-icn" title="View Cart">'.$qty.' products | '.$total.'</a>';
+
+				// if single product in cart
+				if($qty==1)
+					  echo '<a href="'.$cart_url.'" class="font-icn" title="View Cart">1 product | '.$total.'</a>';
+
+				?>
 			<a href="#" class="font-icn" title="View Cart">&#xf07a;</a>
 			<div class="srch">
 				<input type="text" value="" placeholder="Search.."><input type="submit" value="&#xf002;" class="font-icn" title="Search">
