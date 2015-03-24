@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 wc_print_notices();
 
 ?>
-
+<h1 class="sec-title">Your Cart</h1>
 <div class="cart-contener">
 <div class="cart-listing">
 

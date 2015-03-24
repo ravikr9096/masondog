@@ -29,11 +29,11 @@
 
 				// if multiple products in cart
 				if($qty>1)
-					  echo '<a href="'.$cart_url.'" class="font-icn" title="View Cart">'.$qty.' products | '.$total.'</a>';
+					  //echo '<a href="'.$cart_url.'" class="font-icn" title="View Cart">'.$qty.' products | '.$total.'</a>';
 
 				// if single product in cart
 				if($qty==1)
-					  echo '<a href="'.$cart_url.'" class="font-icn" title="View Cart">1 product | '.$total.'</a>';
+					  //echo '<a href="'.$cart_url.'" class="font-icn" title="View Cart">1 product | '.$total.'</a>';
 
 				?>
 			<a href="#" class="font-icn" title="View Cart">&#xf07a;</a>

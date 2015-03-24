@@ -447,7 +447,7 @@ img {
 	font-size:15px;
 	color:#94948b;
 }
-.input-bx input[type="text"],.cnt-bx .input-bx textarea,.input-bx input[type="password"] {
+.input-bx input[type="text"],.input-bx input[type="email"],.cnt-bx .input-bx textarea,.input-bx input[type="password"] {
 	float:left;
 	width:95%;
 	padding:10px 2%;
