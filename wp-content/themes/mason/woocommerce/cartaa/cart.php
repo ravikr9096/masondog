@@ -13,12 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 wc_print_notices();
 
-?>
-
-<div class="cart-contener">
-<div class="cart-listing">
-
-<?php do_action( 'woocommerce_before_cart' ); ?>
+do_action( 'woocommerce_before_cart' ); ?>
 
 <form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
 
@@ -143,9 +138,6 @@ wc_print_notices();
 <?php do_action( 'woocommerce_after_cart_table' ); ?>
 
 </form>
-</div>
-
-<div class="cart-costs">
 
 <div class="cart-collaterals">
 
@@ -154,8 +146,5 @@ wc_print_notices();
 	<?php woocommerce_cart_totals(); ?>
 
 </div>
-</div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
-
-</div>

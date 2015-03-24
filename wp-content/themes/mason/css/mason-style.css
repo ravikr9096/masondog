@@ -1606,3 +1606,8 @@ bottom: 0; visibility:hidden;
     border: 2px solid #000;
     height: 25px;
 }
+
+.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
+	width:100% !important;
+	float:left !important;
+}
