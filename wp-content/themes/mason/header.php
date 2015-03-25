@@ -15,7 +15,8 @@
 	<div class="wpr">
 		<a href="<?php echo home_url();?>" class="logo" title="MASON(dog)"><img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="MASON(dog)"></a>
 		<div class="hdr-optn rit">
-			<a href="#" title="Sign In" data-reveal-id="myModal">Sign In</a>
+		<?php echo do_shortcode('[Alimir_BootModal_Login]');?>
+			<!--<a title="Sign In" data-reveal-id="myModal1" >Sign In</a>-->
 			<?php
 				global $woocommerce;
 
