@@ -1611,3 +1611,6 @@ bottom: 0; visibility:hidden;
 	width:100% !important;
 	float:left !important;
 }
+.woocommerce table.shop_table {
+border:none !important;
+}

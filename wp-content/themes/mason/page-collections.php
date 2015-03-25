@@ -1,4 +1,9 @@
-<?php get_header('inner');?>
+
+<?php 
+/*
+Template Name: Collection page
+*/
+get_header('inner');?>
 <div class="inner-pg-banner">
 	<img src="<?php echo get_template_directory_uri();?>/images/slider-img/page-banner.png" alt="page Banner">
 	<h2 class="banner-titel">Collections</h2>
