@@ -35,6 +35,9 @@ get_header('inner');?>
 			$count = count($product_categories);
 			if ( $count > 0 ){
 				foreach ( $product_categories as $product_category ) {
+					if($product_category->slug == 'featured-products'){
+						continue;
+					}
 					//echo '<li><div class="prdt-nm"><a href="' . get_term_link( $product_category ) . '">' . $product_category->name .'</a>';
 					echo '<li class="mix category-1">
 							<div class="prdt-nm">
