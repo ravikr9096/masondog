@@ -9,9 +9,9 @@
 			</li>
 			<li>
 			<h2 class="fort-titel">CUSTOMER SERVICE</h2>
-			<a href="#" class="fotr-link" title="SIZING CHART">SIZING CHART</a>
+			<a href="<?php echo home_url();?>/sizing" class="fotr-link" title="SIZING CHART">SIZING CHART</a>
 			<a href="#" class="fotr-link" title="SHOPPING INFO">SHOPPING INFO</a>
-			<a href="#" class="fotr-link" title="CONTACT US">CONTACT US</a>
+			<a href="<?php echo home_url();?>/contact" class="fotr-link" title="CONTACT US">CONTACT US</a>
 			</li>
 			<li>
 			<h2 class="fort-titel">FOLLOW US</h2>

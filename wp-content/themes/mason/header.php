@@ -38,7 +38,7 @@
 					  //echo '<a href="'.$cart_url.'" class="font-icn" title="View Cart">1 product | '.$total.'</a>';
 
 				?>
-			<a href="#" class="font-icn" title="View Cart">&#xf07a;</a>
+			<a href="<?php echo home_url();?>/cart" class="font-icn" title="View Cart">&#xf07a;</a>
 			<div class="srch">
 				<input type="text" value="" placeholder="Search.."><input type="submit" value="&#xf002;" class="font-icn" title="Search">
 			</div>

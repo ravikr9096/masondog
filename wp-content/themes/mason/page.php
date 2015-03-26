@@ -1,4 +1,4 @@
-<?php get_header();?>
+<?php get_header('inner');?>
 <div class="inner-pg-banner">
 	<?php 
 	if(get_the_title() == 'Behind the brand') {

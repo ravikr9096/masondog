@@ -1,4 +1,4 @@
-<?php get_header();?>
+<?php get_header('inner');?>
 <div class="inner-pg-banner">
 	<img src="<?php echo get_template_directory_uri();?>/images/slider-img/page-banner.png" alt="page Banner">
 	<h2 class="banner-titel">Features</h2>
@@ -7,25 +7,26 @@
 	<div class="wpr">
 		<h1 class="sec-title inner-pg-title">MEET OUR STYLISH CREW OF FRIENDS...</h1>
 		<ul class="fetur-lst">
-			<li><a href="#" title="THE AZTEC TANK"><img src="<?php echo get_template_directory_uri();?>/images/features-img/williamina.png" alt="THE AZTEC TANK">
-			<h2>W I L L I A M I N A - @WILLIECUTE | THE AZTEC TANK</h2>
-			</a></li>
-			<li><a href="#" title="THE PINEAPPLE"><img src="<?php echo get_template_directory_uri();?>/images/features-img/oliver-frenchi.png" alt="THE PINEAPPLE">
-			<h2>OLIVER FRENCHI - @OLIVERADVENTURES| THE PINEAPPLE</h2>
-			</a></li>
-			<li><a href="#" title="THE GEO-T"><img src="<?php echo get_template_directory_uri();?>/images/features-img/scrappy.png" alt="THE GEO-T">
-			<h2>SCRAPPY THE DOXIE - @SCRAPPYTHEDOXIE | THE GEO-T</h2>
-			</a></li>
-			<li><a href="#" title="THE MAYA-MI"><img src="<?php echo get_template_directory_uri();?>/images/features-img/maddie-girl.png" alt="THE MAYA-MI">
-			<h2>MADDIE GIRL - @MADDIEGIRL_YORKIE | THE MAYA-MI</h2>
-			</a></li>
-			<li><a href="#" title="THE AZTEC TANK"><img src="<?php echo get_template_directory_uri();?>/images/features-img/williamina.png" alt="THE AZTEC TANK">
-			<h2>W I L L I A M I N A - @WILLIECUTE | THE AZTEC TANK</h2>
-			</a></li>
-			<li><a href="#" title="THE PINEAPPLE"><img src="<?php echo get_template_directory_uri();?>/images/features-img/oliver-frenchi.png" alt="THE PINEAPPLE">
-			<h2>OLIVER FRENCHI - @OLIVERADVENTURES| THE PINEAPPLE</h2>
-			</a></li>
+			<?php
+				$args = array( 'post_type' => 'product', 'posts_per_page' => 1, 'product_cat' => 'featured-products', 'orderby' => 'rand' );
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
+
+						<li >    
+
+							<a href="<?php echo get_permalink( $loop->post->ID ) ?>" title="<?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?>">
+
+								<?php if (has_post_thumbnail( $loop->post->ID )) echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="Placeholder" />'; ?>                   
+							<h2><?php echo esc_attr($loop->post->post_title ? $loop->post->post_title : $loop->post->ID); ?></h2>
+							</a>
+
+						</li>
+
+			<?php endwhile; ?>
+			<?php wp_reset_query(); ?>
 		</ul>
+		
+		
 	</div>
 </div>
 
