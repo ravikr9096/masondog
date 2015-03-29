@@ -145,7 +145,7 @@ wc_print_notices();
 		do_action( 'woocommerce_cart_contents' );
 		?>
 		<tr>
-			<td colspan="6" class="actions">
+			<td colspan="6" class="actions cart-btn-holder">
 
 				<?php if ( WC()->cart->coupons_enabled() ) { ?>
 					<div class="coupon">
@@ -156,8 +156,11 @@ wc_print_notices();
 
 					</div>
 				<?php } ?>
-
-				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
+				<a href="<?php echo $_SERVER['HTTP_REFERER'];?>" class=" crt-btn" type="submit" style="height:14px;margin-right:5px;" name="update_cart"  > CONTINUE SHOPPING</a>
+				<input type="submit" class=" crt-btn" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
+				
+				
+				
 
 				<?php do_action( 'woocommerce_cart_actions' ); ?>
 

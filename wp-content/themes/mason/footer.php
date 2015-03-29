@@ -4,14 +4,22 @@
 			<li><a href="#" class="fort-logo" title="MASON(dog)"><img src="<?php echo get_template_directory_uri();?>/images/footer-logo.png" alt="MASON(dog)"></a></li>
 			<li>
 			<h2 class="fort-titel">WHO WE ARE</h2>
-			<a href="#" class="fotr-link" title="ABOUT MASON(dog)">ABOUT MASON(dog)</a>
-			<a href="#" class="fotr-link" title="LOOKBOOK">LOOKBOOK</a>
+				<?php $items = wp_get_nav_menu_items('who we are' );
+			foreach ($items as $val){
+			echo '<a href="'.$val->url.'" class="fotr-link">'.$val->title.'</a>';
+				}
+			?>
 			</li>
 			<li>
 			<h2 class="fort-titel">CUSTOMER SERVICE</h2>
-			<a href="<?php echo home_url();?>/sizing" class="fotr-link" title="SIZING CHART">SIZING CHART</a>
+			<?php $items = wp_get_nav_menu_items('customer service' );
+			foreach ($items as $val){
+			echo '<a href="'.$val->url.'" class="fotr-link">'.$val->title.'</a>';
+				}
+			?>
+			<!--<a href="<?php echo home_url();?>/sizing" class="fotr-link" title="SIZING CHART">SIZING CHART</a>
 			<a href="#" class="fotr-link" title="SHOPPING INFO">SHOPPING INFO</a>
-			<a href="<?php echo home_url();?>/contact" class="fotr-link" title="CONTACT US">CONTACT US</a>
+			<a href="<?php echo home_url();?>/contact" class="fotr-link" title="CONTACT US">CONTACT US</a>-->
 			</li>
 			<li>
 			<h2 class="fort-titel">FOLLOW US</h2>
