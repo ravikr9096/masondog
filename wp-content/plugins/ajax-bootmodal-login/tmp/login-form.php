@@ -1,9 +1,7 @@
 <form id="login" action="login" class="medium" method="post">
-  <div class="modal-header">
+  <div class="modal-body ">
 	<button type="button" class="close" data-dismiss="modal">&#215;</button>
     <h1 class="modal-titel"><?php _e('SIGN IN','alimir'); ?></h1>
-  </div> 
-  <div class="modal-body ">
   	<div class="status"></div>
     <div class="row-fluid control-group">
 		<label><?php print_placeholder_or_label(__('Username','alimir'),'lable'); ?>

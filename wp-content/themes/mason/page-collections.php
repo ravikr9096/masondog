@@ -41,7 +41,7 @@ get_header('inner');?>
 					//echo '<li><div class="prdt-nm"><a href="' . get_term_link( $product_category ) . '">' . $product_category->name .'</a>';
 					echo '<li class="mix category-1">
 							<div class="prdt-nm">
-								<a href="' . get_term_link( $product_category ) . '">'. $product_category->name .'</a>
+								<a >'. $product_category->name .'</a>
 							</div><div class="prdt-img">';
 			?>
 			<?php

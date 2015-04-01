@@ -81,7 +81,7 @@ do_action( 'woocommerce_after_shop_loop_item' ); ?>
 		<script src="<?php print get_template_directory_uri(); ?>/js/jquery.elevateZoom-2.5.3.min.js"></script>
 		<script src="<?php print get_template_directory_uri(); ?>/js/jquery.fancybox.js"></script>
 		<script type="text/javascript">
-			jQuery("#img_01").elevateZoom({gallery:'gallery_01', cursor: 'crosshair', galleryActiveClass: 'active'}); 
+			jQuery("#img_01").elevateZoom({ zoomType : "lens", lensShape : "round", lensSize : 200, zoomLevel: 10 ,scrollZoom : false});
 			//pass the images to Fancybox
 			jQuery("#img_01").bind("click", function(e) {  
 			var ez =   $('#img_01').data('elevateZoom');	

@@ -4,7 +4,7 @@ function alimir_bootModal_form() {
 		?>
 		<div id="alimir_bootmodal" class="modal fade" tabindex="-1" data-width="370" data-backdrop="static" data-keyboard="false" style="display: none;">
 		<div class="tab-content">
-		<div class="tab-pane active fade in" id="login_tab">		
+		<div class="tab-pane active fade in reveal-modal medium" id="login_tab">		
 		<?php include( plugin_dir_path( dirname(__FILE__) ) . 'tmp/login-form.php'); ?>
 		</div>
 		<?php if (get_option( 'can_register_option' ) != 1): ?>

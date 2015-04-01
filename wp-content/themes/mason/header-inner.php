@@ -15,8 +15,9 @@
 	<div class="wpr">
 		<a href="<?php echo home_url();?>" class="logo inner-pg" title="MASON(dog)"><img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="MASON(dog)"></a>
 		<div class="hdr-optn rit">
-			<a href="#" title="Sign In" data-reveal-id="myModal">Sign In</a>
-			<a href="#" class="font-icn" title="View Cart">&#xf07a;</a>
+			<?php echo do_shortcode('[Alimir_BootModal_Login]');?>
+			<!--<a href="#" title="Sign In" data-reveal-id="myModal">Sign In</a>-->
+			<a href="<?php echo home_url();?>/cart" class="font-icn" title="View Cart">&#xf07a;</a>
 			<div class="srch">
 				<input type="text" value="" placeholder="Search.."><input type="submit" value="&#xf002;" class="font-icn" title="Search">
 			</div>
