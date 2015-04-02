@@ -13,8 +13,8 @@ get_header('inner');?>
 		<div class="collections">
 			<div class="controls">
 				<ul class="control-btns">
-					<li class="filter" data-filter="all">All</li>
-					<li class="filter" data-filter=".category-1">NEW ARRIVALS</li>
+					<li class="filter" data-filter="all"><a href="<?php echo home_url();?>/all">All</a></li>
+					<li class="filter" data-filter=".category-1"><a href="<?php echo home_url();?>/new-arrival">NEW ARRIVALS</a></li>
 					<li class="filter" data-filter=".category-2">TANKS</li>
 					<li class="filter" data-filter=".category-3">T-SHIRTS</li>
 				</ul>

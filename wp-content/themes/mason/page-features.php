@@ -8,7 +8,12 @@
 		<h1 class="sec-title inner-pg-title">MEET OUR STYLISH CREW OF FRIENDS...</h1>
 		<ul class="fetur-lst">
 			<?php
-				$args = array( 'post_type' => 'product', 'posts_per_page' => 1, 'product_cat' => 'featured-products', 'orderby' => 'rand' );
+				$args = array(  
+								'post_type' => 'product',  
+								'meta_key' => '_featured',  
+								'meta_value' => 'yes',  
+								'posts_per_page' => 10  
+							);  
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
 
