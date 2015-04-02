@@ -1,12 +1,11 @@
 <form id="login" action="login" class="medium" method="post">
   <div class="modal-body ">
-	<button type="button" class="close" data-dismiss="modal">&#215;</button>
-    <h1 class="modal-titel"><?php _e('SIGN IN','alimir'); ?></h1>
-  	<div class="status"></div>
+	
     <div class="row-fluid control-group">
-		<label><?php print_placeholder_or_label(__('Username','alimir'),'lable'); ?>
+		<button type="button" class="close" data-dismiss="modal">&#215;</button>
+    <h1 class="text-center"><?php _e('SIGN IN','alimir'); ?></h1>
+  	<div class="status"></div>
         <input type="text" name="username" id="username" class="span12" value="" <?php print_placeholder_or_label(__('Username','alimir'),'placeholder'); ?>/></label>
-		<label><?php print_placeholder_or_label( __('Password','alimir'),'lable'); ?>
         <input type="password" name="password" id="password" class="span12" value="" <?php print_placeholder_or_label( __('Password','alimir'),'placeholder'); ?>/></label>
 		<?php if (get_option( 'enable_login_captcha' ) == 1):?>
 		<label><?php print_placeholder_or_label(__('Captcha','alimir'),'lable'); ?>
@@ -22,8 +21,8 @@
 		<span class="label label-info"><a href="#lostpass_tab" data-toggle="tab"><?php _e('Lost your password?','alimir'); ?></a></span>	
     </div>
   </div>
-  <div class="modal-footer">
-        <button type="submit" name="submit" id="wp-submit" class="btn <?php echo default_buttons(); ?> <?php echo default_sizes(); ?> btn-block" data-loading-text="<?php _e('loading...','alimir'); ?>"><?php _e('Submit','alimir'); ?></button>
+  <div class="modal-footer login-btn-holdr sign" style="background:none;">
+        <button type="submit" name="submit" id="wp-submit" class="btn sgn-up-btn <?php echo default_buttons(); ?> <?php echo default_sizes(); ?> btn-block" data-loading-text="<?php _e('loading...','alimir'); ?>"><?php _e('LOGIN','alimir'); ?></button>
   </div>
    <?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
 </form>

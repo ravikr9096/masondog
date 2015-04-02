@@ -57,9 +57,9 @@
 	        transition: opacity 0.3s linear, top 0.3s ease-out, bottom 0.3s ease-out, margin-top 0.3s ease-out;
 }
 
-.modal.fade.in {
+/* .modal.fade.in {
 	top: 50%;
-}
+} */
 
 .modal-body {
 	max-height: none;
