@@ -15,8 +15,24 @@ get_header('inner');?>
 				<ul class="control-btns">
 					<li class="filter" data-filter="all"><a href="<?php echo home_url();?>/all">All</a></li>
 					<li class="filter" data-filter=".category-1"><a href="<?php echo home_url();?>/new-arrival">NEW ARRIVALS</a></li>
-					<li class="filter" data-filter=".category-2">TANKS</li>
-					<li class="filter" data-filter=".category-3">T-SHIRTS</li>
+					<?php
+					$args = array(
+						'number'     => $number,
+						'orderby'    => $orderby,
+						'order'      => $order,
+						'hide_empty' => $hide_empty,
+						'include'    => $ids
+					);
+					$product_categories = get_terms( 'product_cat', $args );
+					$count = count($product_categories);
+					if ( $count > 0 ){
+						foreach ( $product_categories as $product_category ) {
+							echo '<li class="filter"><a href="'. home_url().'/collections?category='.$product_category->slug.'" title="'.$product_category->name.'">'.$product_category->name.'
+					</a></li>';
+						}
+					}
+					?>
+					
 				</ul>
 				<span>Styles</span>
 			</div>
@@ -31,22 +47,25 @@ get_header('inner');?>
 				'hide_empty' => $hide_empty,
 				'include'    => $ids
 			);
-			$product_categories = get_terms( 'product_cat', $args );
-			$count = count($product_categories);
+			$product_tags = get_terms( 'product_tag', $args );
+			$count = count($product_tags);
 			if ( $count > 0 ){
-				foreach ( $product_categories as $product_category ) {
-					if($product_category->slug == 'featured-products'){
+				foreach ( $product_tags as $product_tag ) {
+					if($product_tag->slug == 'featured-products'){
 						continue;
 					}
 					//echo '<li><div class="prdt-nm"><a href="' . get_term_link( $product_category ) . '">' . $product_category->name .'</a>';
-					echo '<li class="mix category-1">
-							<div class="prdt-nm">
-								<a >'. $product_category->name .'</a>
-							</div><div class="prdt-img">';
+					
 			?>
 			<?php
-			$args = array( 'post_type' => 'product', 'posts_per_page' => 20, 'product_cat' => $product_category->slug, 'orderby' => 'rand' );
+			$args = array( 'post_type' => 'product', 'posts_per_page' => 20, 'product_cat' => $_GET['category'],'product_tag' => $product_tag->slug, 'orderby' => 'rand' );
 			$loop = new WP_Query( $args );
+			if( $loop->have_posts()) {
+			echo '<li class="mix category-1">
+							<div class="prdt-nm">
+								<a >'. $product_tag->name .'</a>
+							</div><div class="prdt-img">';
+			}
 			while ( $loop->have_posts() ) : $loop->the_post(); global $product;
 			//print_r($product);
 			?>

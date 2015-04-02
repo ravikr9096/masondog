@@ -14,8 +14,33 @@
 <div class="bdy-sect">
 	<div class="wpr">
 		<h1 class="sec-title">Collections</h1>
+		
 		<ul class="coltn-lst">
-			<li><a href="#" title="Best Sellers"><img src="<?php echo get_template_directory_uri();?>/images/collection-img/best-sellers.png" alt="Best Sellers">
+		<?php
+			$args = array(
+				'number'     => $number,
+				'orderby'    => $orderby,
+				'order'      => $order,
+				'hide_empty' => $hide_empty,
+				'include'    => $ids
+			);
+			$product_categories = get_terms( 'product_cat', $args );
+			$count = count($product_categories);
+			if ( $count > 0 ){
+				foreach ( $product_categories as $product_category ) {
+					if($product_category->slug == 'featured-products'){
+						continue;
+					}
+					$thumbnail_id = get_woocommerce_term_meta( $product_category->term_id, 'thumbnail_id', true );
+					$image = wp_get_attachment_url( $thumbnail_id );
+					echo '<li><a href="'. home_url().'/collections?category='.$product_category->slug.'" title="Best Sellers"><img src="'. $image.'" alt="Best Sellers">
+			<h2>'.$product_category->name.'</h2>
+			</a></li>';
+				}
+			}
+			?>
+		
+			<!--<li><a href="#" title="Best Sellers"><img src="<?php echo get_template_directory_uri();?>/images/collection-img/best-sellers.png" alt="Best Sellers">
 			<h2>BEST SELLERS</h2>
 			</a></li>
 			<li><a href="#" title="Tank Top"><img src="<?php echo get_template_directory_uri();?>/images/collection-img/tank-top.png" alt="Tank Top">
@@ -23,7 +48,7 @@
 			</a></li>
 			<li><a href="#" title="T-Shirt"><img src="<?php echo get_template_directory_uri();?>/images/collection-img/t-shirt.png" alt="T-Shirt">
 			<h2>T-Shirt</h2>
-			</a></li>
+			</a></li>-->
 		</ul>
 		<h1 class="sec-title">Features</h1>
 		<ul class="fetur-lst">
