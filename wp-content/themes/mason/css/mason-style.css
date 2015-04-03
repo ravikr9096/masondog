@@ -230,6 +230,12 @@ img {
 	width:47.5%;
 	margin-bottom:20px;
 }
+.all-lst li {
+	float:left;
+	width:33%;
+	margin-right:0;
+	margin-bottom:20px;
+}
 .coltn-lst li img,.fetur-lst li img {
 	float:left;
 	width:100%;
@@ -251,6 +257,7 @@ img {
 	float:left;
 	width:100%;
 	letter-spacing:-0.5px;
+	text-align:center;
 }
 .coltn-lst li:hover h2,.fetur-lst li:hover h2 {
 	color:#333;
