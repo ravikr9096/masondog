@@ -1,12 +1,27 @@
 <?php get_header(); ?>
 <div id="wrapper" class="slid-sect">
 	<div id="carousel">
+	<?php
+	$files = scandir(__dir__ .'/images/home-slider-img');
+	print_r($files);
+	foreach($files as $file){
+		if($file == '.' || $file =='..') {
+			continue;
+		}
+		else {
+			echo '<img src="'.get_template_directory_uri().'/images/home-slider-img/'.$file.'">';
+			
+		}
+	}
+	
+	?>
+	<!--<div id="carousel">
 		<img src="<?php echo get_template_directory_uri();?>/images/slider-img/image-2.png">
 		<img src="<?php echo get_template_directory_uri();?>/images/slider-img/image-1.png">
 		<img src="<?php echo get_template_directory_uri();?>/images/slider-img/image-2.png">
 		<img src="<?php echo get_template_directory_uri();?>/images/slider-img/image-1.png">
 		<img src="<?php echo get_template_directory_uri();?>/images/slider-img/image-2.png">
-		<img src="<?php echo get_template_directory_uri();?>/images/slider-img/image-1.png">
+		<img src="<?php echo get_template_directory_uri();?>/images/slider-img/image-1.png">-->
 	</div>
 	<a href="#" id="prev" title="Show previous" class="font-icn">&#xf104;</a>
 	<a href="#" id="next" title="Show next" class="font-icn">&#xf105; </a>

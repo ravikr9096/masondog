@@ -74,17 +74,18 @@
 </div>
 <div id="myModal" class="reveal-modal medium ">
 	<h1 class="modal-titel">SIGN IN</h1>
+	<form name="loginform" id="loginform" action="<?php echo site_url( '/wp-login.php' ); ?>" method="post">
 	<div class="input-bx">
-		<input type="text" placeholder="Email Address" value=""><span class="font-icn">@</span>
+		<input type="text" placeholder="Email Address" id="user_login" name="user_login" value=""><span class="font-icn">@</span>
 	</div>
 	<div class="input-bx">
-		<input type="text" placeholder="Passward" value=""><span class="font-icn">&#xf023;</span>
+		<input type="text" placeholder="Passward" id="user_pass" name="user_pass"value=""><span class="font-icn">&#xf023;</span>
 	</div>
 	<div class="input-bx">
 		<input type="checkbox"><span class="remb-me">REMEMBER ME</span><a href="#" class="forgt-pss">Forgot Password?</a>
 	</div>
 	<div class="login-btn-holdr sign">
-		<input type="submit" value="LOGIN" class="sgn-up-btn">
+		<input type="submit" value="LOGIN" name="wp-submit" class="sgn-up-btn">
 		<p class="info-tgl">
 			DON’T HAVE AN ACCOUNT? <a href="#" data-reveal-id="myModal2" class="close">SIGN UP!</a>
 		</p>
