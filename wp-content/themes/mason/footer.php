@@ -100,7 +100,7 @@
 <script type="text/javascript">
 jQuery(document).ready(function($) {  
 $(window).load(function(){
-$('#preloader').fadeOut(1500,function(){$(this).remove();});
+$('#preloader').fadeOut(300,function(){$(this).remove();});
 });
 });
 window.onorientationchange = function(){window.location.reload();}
@@ -136,6 +136,26 @@ $(document).ready(function()
 $("#Container li:odd").addClass("odd");
 $("#Container li:even").addClass("even");
 $('#Container').mixItUp();
+
+/* handle hovering on cart icon*/
+$('#cart-icon-menu').mouseover(function(){
+
+$('#cart-mini-view').show();
+});
+$('#cart-mini-view').mouseover(function(){
+
+$('#cart-mini-view').show();
+});
+$('#cart-icon-menu').mouseout(function(){
+
+$('#cart-mini-view').hide();
+});
+
+$('#cart-mini-view').mouseout(function(){
+
+$('#cart-mini-view').hide();
+})
+
 });
 		</script>
 		</body>

@@ -1652,3 +1652,14 @@ bottom: 0; visibility:hidden;
 .woocommerce table.shop_table {
 border:none !important;
 }
+
+
+#cart-mini-view{
+ border: 1px solid;
+    padding: 15px;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    z-index: 9999;
+	background:#fff;
+}

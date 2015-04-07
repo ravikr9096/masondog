@@ -1,7 +1,7 @@
 
 <?php 
 /*
-Template Name: Collection page
+Template Name: Style page
 */
 get_header('inner');?>
 <div class="inner-pg-banner">
@@ -58,7 +58,7 @@ get_header('inner');?>
 					
 			?>
 			<?php
-			$args = array( 'post_type' => 'product', 'posts_per_page' => 20, 'product_cat' => $_GET['category'],'product_tag' => $product_tag->slug, 'orderby' => 'rand' );
+			$args = array( 'post_type' => 'product', 'posts_per_page' => 20,'product_tag' => $product_tag->slug, 'orderby' => 'rand' );
 			$loop = new WP_Query( $args );
 			if( $loop->have_posts()) {
 			echo '<li class="mix category-1">

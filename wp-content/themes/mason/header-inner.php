@@ -17,7 +17,11 @@
 		<div class="hdr-optn rit">
 		<?php add_modal_login_button( $login_text='SIGN IN ' , $logout_text='LOG OUT' , $logout_url='' , $show_admin=false ); ?>
 			<!--<a href="#" title="Sign In" data-reveal-id="myModal">Sign In</a>-->
-			<a href="<?php echo home_url();?>/cart" class="font-icn" title="View Cart">&#xf07a;</a>
+			<a href="<?php echo home_url();?>/cart" class="font-icn" title="View Cart" id="cart-icon-menu" >&#xf07a;</a>
+			<div id="cart-mini-view" style="display:none;">
+				<h4>Products in cart</h4>
+				<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf (_n( '%d item', '%d items', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?> - <?php echo WC()->cart->get_cart_total(); ?></a>
+			</div>
 			<div class="srch">
 				<input type="text" value="" placeholder="Search.."><input type="submit" value="&#xf002;" class="font-icn" title="Search">
 			</div>

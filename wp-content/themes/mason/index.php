@@ -3,7 +3,6 @@
 	<div id="carousel">
 	<?php
 	$files = scandir(__dir__ .'/images/home-slider-img');
-	print_r($files);
 	foreach($files as $file){
 		if($file == '.' || $file =='..') {
 			continue;
