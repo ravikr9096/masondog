@@ -16,6 +16,27 @@
 		<a href="<?php echo home_url();?>" class="logo inner-pg" title="MASON(dog)"><img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="MASON(dog)"></a>
 		<div class="hdr-optn rit">
 		<?php add_modal_login_button( $login_text='SIGN IN ' , $logout_text='LOG OUT' , $logout_url='' , $show_admin=false ); ?>
+		<?php
+				global $woocommerce;
+
+				// get cart quantity
+				$qty = $woocommerce->cart->get_cart_contents_count();
+
+				// get cart total
+				$total = $woocommerce->cart->get_cart_total();
+
+				// get cart url
+				$cart_url = $woocommerce->cart->get_cart_url();
+
+				// if multiple products in cart
+				if($qty>1)
+					  echo '<a href="'.$cart_url.'"  style="margin-left:20px;" title="View Cart">( '.$qty.' PRODUCTS )</a>';
+
+				// if single product in cart
+				if($qty==1)
+					  echo '<a href="'.$cart_url.'"  style="margin-left:20px;" title="View Cart">( 1 PRODUCT )</a>';
+
+				?>
 			<!--<a href="#" title="Sign In" data-reveal-id="myModal">Sign In</a>-->
 			<a href="<?php echo home_url();?>/cart" class="font-icn" title="View Cart" id="cart-icon-menu" >&#xf07a;</a>
 			<div id="cart-mini-view" style="display:none;">

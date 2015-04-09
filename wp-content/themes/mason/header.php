@@ -31,11 +31,11 @@
 
 				// if multiple products in cart
 				if($qty>1)
-					  //echo '<a href="'.$cart_url.'" class="font-icn" title="View Cart">'.$qty.' products | '.$total.'</a>';
+					  echo '<a href="'.$cart_url.'"  style="margin-left:20px;" title="View Cart">( '.$qty.' PRODUCTS )</a>';
 
 				// if single product in cart
 				if($qty==1)
-					  //echo '<a href="'.$cart_url.'" class="font-icn" title="View Cart">1 product | '.$total.'</a>';
+					  echo '<a href="'.$cart_url.'"  style="margin-left:20px;" title="View Cart">( 1 PRODUCT )</a>';
 
 				?>
 			<a href="<?php echo home_url();?>/cart" class="font-icn" title="View Cart" id="cart-icon-menu" >&#xf07a;</a>
@@ -43,6 +43,7 @@
 				<h4>Products in cart</h4>
 				<a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf (_n( '%d item', '%d items', WC()->cart->cart_contents_count ), WC()->cart->cart_contents_count ); ?> - <?php echo WC()->cart->get_cart_total(); ?></a>
 			</div>
+			
 			<div class="srch">
 				<input type="text" value="" placeholder="Search.."><input type="submit" value="&#xf002;" class="font-icn" title="Search">
 			</div>
